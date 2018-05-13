@@ -1,0 +1,21 @@
+{
+  "name": "preguntas",
+  "version": "0.0.1",
+  "description": "Proyecto para que los dominicanos no olviden la corrupcion en RD",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Moises Almonte",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongodb": "^3.1.0-beta4",
+    "morgan": "^1.9.0",
+    "pug": "^2.0.3",
+    "session-file-store": "^1.2.0"
+  }
+}
