@@ -18,16 +18,17 @@ app.use(session({
     secret: "qwert !@#$",
     saveUninitialized: false,
     resave: false,
-    store: new FileStore({path:"./sessions/"})
+    store: new FileStore({path:"./sessions/"}),
+    cookie: {nombre: "moises"}
 }));
 app.use(checkUser);
 
-app.get('/', (req, res)=>{
-    res.send('HolaMundo!');
-});
+// Rutas del servidor web
+var home = require('./routes/index');
+app.use('/', home);
+
 
 var envPort = process.env.port || 3000;
-
 var server = app.listen(envPort, (err)=>{
     if(err) throw err;
     
