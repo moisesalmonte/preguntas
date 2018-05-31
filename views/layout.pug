@@ -2,7 +2,14 @@ doctype html
 html(lang='es-DO')
     head
         meta(charset='UTF-8')
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
         title #{title}
+        //-
+            script(src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous")
+            script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous")
+            link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous")
+        
         link(rel='stylesheet' href='css/styles.css')
     body
         header
@@ -12,6 +19,8 @@ html(lang='es-DO')
                         a(href='/') HOME
                     li
                         a(href='#') Best Player's
+                    li
+                        a(href='/recuperar/') Recuperar Sesion
                     li
                         a(href='#') Contacto
                     li

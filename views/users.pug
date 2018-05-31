@@ -1,0 +1,42 @@
+extends ./layout.pug
+block cuerpo
+    section
+        form.registro#formulario(method="post" action="#")
+            div
+                label(for="nombre") Nombre:
+                input#nombre(type="text" name="nombre" required)
+                label(for="apellido") Apellido:
+                input#apellido(type="text" name="apellido" required)
+            div
+                label(for="apodo") Apodo:
+                input#apodo(type="text" name="apodo" required)
+                select#provincia(name="ubicacion" required)
+                    option(value="Santo Domingo") Santo Domingo
+                    option(value="Santiago") Santiago
+                    option(value="Otro Pais") Otro Pais
+            div
+                label(for='email') E-mail:
+                input#email(type="email" name="email" required)
+            div
+                div
+                    p ¿Apoyas La Marcha Verde?
+                    label(for="mv1") Si.
+                    input#mv1(type='radio' name="mv" value="true")
+                    label(for="mv2") No.
+                    input#mv2(type='radio' name="mv" value="false")
+                div
+                    p Sexo?
+                    label(for="fsexo") F
+                    input#fsexo(type='radio' name="sexo" value="F")
+                    label(for="msexo") M
+                    input#msexo(type='radio' name="sexo" value="M")
+                    label(for="osexo") Otro
+                    input#osexo(type='radio' name="sexo" value="O")
+                div
+                    label(for="edad") Edad
+                    input#edad(type="number" name="edad" value="23")
+            div
+                button(type="submit") Enviar
+                    
+    script(src="../js/checkDisponibilidad.js")
+            

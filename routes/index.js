@@ -5,7 +5,12 @@ var variables = {
 };
 
 router.get('/', function(req, res){
-    res.render("index", variables);
+    
+    if(req.session.userId){
+        res.render("index", variables);
+    }else{
+        res.redirect(/registro/);
+    }
 });
 
 module.exports = router;

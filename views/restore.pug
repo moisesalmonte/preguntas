@@ -1,0 +1,10 @@
+extends ./layout.pug
+block cuerpo
+    section 
+        form#restore(method="post")
+            div
+                label(for="email") e-mail:
+                input#email(type="email" name="email" required)
+            div
+                button(type="submit") Enviar
+                
